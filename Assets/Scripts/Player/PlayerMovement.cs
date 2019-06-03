@@ -87,9 +87,10 @@ public class PlayerMovement : MonoBehaviour
 		rgbd.velocity = Vector3.zero;
 		acc = 0;
 		rgbd.AddForce(transform.forward * 1200, ForceMode.Impulse);
-		Transform fireDash = Instantiate(GameAssets.i.fireDash, transform.position - (transform.forward * .2f), Quaternion.identity);
+		Transform fireDash = Instantiate(GameAssets.i.fireDash, transform.position + (transform.forward * .2f), Quaternion.identity);
 		fireDash.parent = hand;
-		fireDash.rotation = Quaternion.LookRotation(new Vector3(-transform.forward.x, 0f, -transform.forward.z), Vector3.up);
+		fireDash.localPosition = Vector3.zero;
+		fireDash.rotation = Quaternion.LookRotation(new Vector3(-transform.forward.x, 0, -transform.forward.z), transform.up);
 		Destroy(fireDash.gameObject, .7f);
 		CheckForAbility(playerInputController.fireEffect, 13, 6);
 		AudioManager.i.Play("FireDash", transform.position);

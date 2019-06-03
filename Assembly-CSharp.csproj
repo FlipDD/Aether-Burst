@@ -124,6 +124,7 @@
      <Compile Include="Assets\ParticleRotator.cs" />
      <Compile Include="Assets\ParticleSpikes.cs" />
      <Compile Include="Assets\ParticleTrigger.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PoisonAttack.cs" />
      <Compile Include="Assets\RangedEnemy.cs" />
      <Compile Include="Assets\ReadAngularSpeed.cs" />

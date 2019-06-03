@@ -207,7 +207,12 @@ public class EnemyBehaviour : EnemyBase
         jumping = true;
         state = State.Jumping;
         moving = true;
-        yield return new WaitForSeconds(3f);
+        StartCoroutine(LookAtPlayer());
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(LookAtPlayer());
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(LookAtPlayer());
+        yield return new WaitForSeconds(1f);
         playingLaunchAttack = false;
         attacking = true;
         transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
@@ -343,7 +348,7 @@ public class EnemyBehaviour : EnemyBase
         breakGroundPs.transform.position = point;
         breakGroundPs.transform.rotation = Quaternion.identity;
         breakGroundPs.Play();
-        yield return new WaitForSeconds(3.1f);
+        yield return new WaitForSeconds(5f);
         breakGroundPs.transform.parent = transform;
         breaking = false;
 

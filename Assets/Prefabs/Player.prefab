@@ -983,7 +983,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 15
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1086,66 +1086,8 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 1
-    m_Bursts:
-    - serializedVersion: 2
-      time: 0
-      countCurve:
-        serializedVersion: 2
-        minMaxState: 0
-        scalar: 10
-        minScalar: 30
-        maxCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        minCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-      cycleCount: 1
-      repeatInterval: 0.01
-      probability: 1
+    m_BurstCount: 0
+    m_Bursts: []
   SizeModule:
     enabled: 0
     curve:
@@ -4961,8 +4903,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.017555287, y: 0.00534779, z: 0.018404692}
-    m_Extent: {x: 0.48867303, y: 0.34265304, z: 0.636192}
+    m_Center: {x: -0.026900604, y: 0.061607078, z: 0.013607711}
+    m_Extent: {x: 0.46449822, y: 0.3922309, z: 0.63621867}
   m_DirtyAABB: 0
 --- !u!183 &548334020727981750
 Cloth:
@@ -58924,7 +58866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7111178731998548007
 Transform:
   m_ObjectHideFlags: 0
@@ -97098,8 +97040,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.009845734, y: -0.16551536, z: 8.145967}
-    m_Extent: {x: 15.65539, y: 0.1655153, z: 3.589372}
+    m_Center: {x: 0.0000076293945, y: -0.20059389, z: 4.9894786}
+    m_Extent: {x: 5.172294, y: 0.20059383, z: 0.20965597}
   m_DirtyAABB: 0
 --- !u!183 &6212213719829615337
 Cloth:
@@ -97485,10 +97427,6 @@ MonoBehaviour:
   airEffect: {fileID: 4799045706410268524}
   groundEffect: {fileID: 6155347672278826969}
   menu: {fileID: 0}
-  waterImg: {fileID: 0}
-  airImg: {fileID: 0}
-  fireImg: {fileID: 0}
-  groundImg: {fileID: 0}
   isGrounded: 0
   hasJumped: 0
   ischarging: 0
@@ -97504,6 +97442,7 @@ MonoBehaviour:
   bouldertrigger: {fileID: 0}
   aetherBurst: {fileID: 0}
   sphereCollider: {fileID: 3312835166000927968}
+  wheelPointer: {fileID: 0}
 --- !u!114 &7546121341527297381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134289,7 +134228,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 25
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -138314,8 +138253,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.00982666, y: -0.16551816, z: 8.146729}
-    m_Extent: {x: 15.657758, y: 0.16551828, z: 3.5901527}
+    m_Center: {x: -0.000011444092, y: -0.20059693, z: 4.9883695}
+    m_Extent: {x: 5.1706605, y: 0.20059705, z: 0.20912907}
   m_DirtyAABB: 0
 --- !u!183 &2850813266594446032
 Cloth:

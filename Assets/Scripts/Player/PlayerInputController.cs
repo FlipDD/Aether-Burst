@@ -127,6 +127,7 @@ public class PlayerInputController : MonoBehaviour
     AudioManager audioManager;
     [SerializeField]
     private Transform wheelPointer;
+    private Transform pauseMenu;
 
     public enum State
 	{
@@ -159,7 +160,7 @@ public class PlayerInputController : MonoBehaviour
             AudioManager.i.PlayBackground("Explore2");
             musicNumber = 2;
         }
-        else if (SceneManager.GetActiveScene().name == "BossSection")
+        else if (SceneManager.GetActiveScene().name == "BossSection" || SceneManager.GetActiveScene().name == "StorageSection")
         {
             AudioManager.i.PlayBackground("Explore1");
             musicNumber = 1;
@@ -234,6 +235,9 @@ public class PlayerInputController : MonoBehaviour
         waterImg = wheelPointer.GetChild(0).Find("Water").GetComponent<Image>();
         groundImg = wheelPointer.GetChild(0).Find("Ground").GetComponent<Image>();
 
+        pauseMenu = aetherText.transform.parent.Find("PauseMenu");
+        pauseMenu.gameObject.SetActive(false);
+
 	}
     #endregion
 
@@ -287,7 +291,7 @@ public class PlayerInputController : MonoBehaviour
             aetherBurst.Play();
             StartCoroutine(IncreaseSphereCollider());
 		}
-		if (Input.GetButtonDown("MouseWheel") && burstTime == -1)
+		if (Input.GetButtonDown("MouseWheel") && burstTime == -1 && !pauseMenu.gameObject.activeInHierarchy)
 		{
 			menu.SetActive(true);
 			GetComponentInChildren<Projector>().enabled = false;
@@ -300,9 +304,23 @@ public class PlayerInputController : MonoBehaviour
 			SetState(State.ChangingElements);
 		} 
 
-		if (Input.GetKey(KeyCode.Escape))
-			Application.Quit();
-
+		if (Input.GetKeyDown(KeyCode.Escape))
+			if (pauseMenu.gameObject.activeInHierarchy)
+            {
+                pauseMenu.gameObject.SetActive(false);
+                Time.timeScale = 1;
+			    Time.fixedDeltaTime = .02f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                pauseMenu.gameObject.SetActive(true);
+                Time.timeScale = 0;
+			    Time.fixedDeltaTime = 0f;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
 		if (Input.GetMouseButtonUp(1))
 			rightMouseUp = true;
 		if (Input.GetMouseButtonDown(1))
@@ -655,13 +673,11 @@ public class PlayerInputController : MonoBehaviour
             else mouse_pos = angle;
             mouse_pos.z = 5f;
             Vector3 object_pos = Camera.main.WorldToScreenPoint(wheelPointer.position);
-            Debug.Log(object_pos);
             // mouse_pos.x = mouse_pos.x - object_pos.x;
             // mouse_pos.y = mouse_pos.y - object_pos.y;
             float angleToMouse = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
             wheelPointer.rotation = Quaternion.Euler(new Vector3(0, 0, angleToMouse));
 
-            Debug.Log(angleToMouse);
             if (angleToMouse >= 45 && angleToMouse < 135)
             {
                 // airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, 1);

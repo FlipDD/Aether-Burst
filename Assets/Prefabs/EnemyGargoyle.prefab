@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1c9e221df833344a4d2ab784c993fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
+  health: 85
   slider: {fileID: 7246117803870619060}
 --- !u!95 &6875798851193102065
 Animator:
