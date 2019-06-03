@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/flip_/Desktop/Aether Burst - Build (Windows)/AlchemyThingie.exe
+C:/Users/flip_/Desktop/Aether Bur/AlchemyThingie.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/EntranceSection.unity
@@ -47,7 +47,7 @@ e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventH
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
 3e8858bb1fa0279a587e4ed21eb63162 Assembly-CSharp.dll:.InverseKinematicsCC
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PoisonAttack
-7d228ad581abb203db47d86290e2e694 Assembly-CSharp.dll:.PlayerInputController
+ecec48a2676c3f8714c9e2a3deec8f9a Assembly-CSharp.dll:.PlayerInputController
 cad6ad5cdbbc8d71759c8f551ae4eb64 Assembly-CSharp.dll:.CameraBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_PhoneNumberValidator
 c80bc562de10fdbf8b2e9bcb89d80421 Cinemachine.dll:Cinemachine.CinemachineCollisionImpulseSource
@@ -156,6 +156,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DestroySkulls
 7f5a822f3c5731480b6a4f28d8e41add Assembly-CSharp.dll:.Icon
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
+224d1fbf37743a0ec91e3fb0b2119091 Assembly-CSharp.dll:.LookAtMouse
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SouthTerrainBoss
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -273,6 +274,7 @@ e6d75f1a9bc0c6f7085df0baa077e688 Cinemachine.dll:Cinemachine.CinemachineGroupCom
 300fdb4cad14805d5fa5704ee840fbdb Assembly-CSharp.dll:.HpPickable
 4a639215e29265dd99e4fed19e3fa9f4 Cinemachine.dll:Cinemachine.CinemachineBlendListCamera
 11319334e5365797f8056694f9b5dae4 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
+a6b6d83e35df1ca3d5d2d9c4381c74cc Assembly-CSharp.dll:.DamageEnemy
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 b639d97cb780d0d99a2bfb3ad1935732 Cinemachine.dll:Cinemachine.CinemachineMixingCamera
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DoorUp
@@ -363,4 +365,3 @@ f3ee07221c9603aeb52a12b02a02e7ae Assembly-CSharp.dll:.FiniteStateMachine
 2792936179724025482dc04d68a47ca7 Cinemachine.dll:Cinemachine.CinemachineClearShot
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ImageEffect
 c744db285029cf24a2a6b0d2c361c2d3 Assembly-CSharp.dll:.OpenDoor
-224d1fbf37743a0ec91e3fb0b2119091 Assembly-CSharp.dll:.LookAtMouse

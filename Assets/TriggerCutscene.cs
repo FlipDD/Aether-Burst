@@ -7,11 +7,10 @@ public class TriggerCutscene : MonoBehaviour
     Animator anim;
     Vector3 originalPos;
     // Transform parent;
-    [SerializeField] AudioSource music;
 
     void Start()
     {
-        anim = FindObjectOfType<CameraCollision>().GetComponent<Animator>();
+        anim = FindObjectOfType<CameraBehaviour>().GetComponent<Animator>();
         originalPos = anim.transform.localPosition;
         // parent = anim.transform.parent;
     } 
@@ -21,16 +20,16 @@ public class TriggerCutscene : MonoBehaviour
         if (col.gameObject.CompareTag("Player")) 
         {
             // anim.transform.parent = null;
-            anim.transform.parent.GetComponent<CameraBehaviour>().playingCutscene = true;
+            // anim.transform.GetComponent<CameraBehaviour>().playingCutscene = true;
             // anim.transform.localposition = new Vector3(0, 0, 0);
-            anim.GetComponentInParent<CameraBehaviour>().playingCutscene = true;
+            anim.GetComponent<CameraBehaviour>().playingCutscene = true;
             // anim.transform.parent = null;  
-            anim.GetComponent<CameraCollision>().playingCutscene = true;
+            anim.GetComponentInChildren<CameraCollision>().playingCutscene = true;
 
             anim.SetTrigger("Cutscene");
-            music.Play();
+            AudioManager.i.PlayBackground("Explore3");  
             GetComponent<BoxCollider>().enabled = false;
-            anim.transform.parent.position = Vector3.zero;
+            // anim.transform.parent.position = Vector3.zero;
         }
     }
 
@@ -39,12 +38,13 @@ public class TriggerCutscene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) SetParent();
     }
 
-    void SetParent()
+    internal void SetParent()
     {
         // anim.transform.parent = parent;
-        anim.transform.localPosition = originalPos;
-        anim.GetComponent<CameraCollision>().playingCutscene = false;
-        anim.GetComponentInParent<CameraBehaviour>().playingCutscene = false;
-        anim.SetTrigger("Cutscene");
+        // anim.transform.localPosition = originalPos;
+        anim.GetComponent<CameraBehaviour>().playingCutscene = false;
+        anim.GetComponentInChildren<CameraCollision>().playingCutscene = false;
+        anim.SetTrigger("Cutsceneover");
+        Destroy(gameObject);
     }
 }

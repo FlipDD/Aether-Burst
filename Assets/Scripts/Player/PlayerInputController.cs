@@ -32,10 +32,10 @@ public class PlayerInputController : MonoBehaviour
 	public GameObject airEffect;
 	public GameObject groundEffect;
 	public GameObject menu;
-	public Image waterImg;
-	public Image airImg;
-	public Image fireImg;
-	public Image groundImg;
+	private Image waterImg;
+	private Image airImg;
+	private Image fireImg;
+	private Image groundImg;
 	//AIR 0
 	//WATER 1
 	//FIRE 2
@@ -125,6 +125,8 @@ public class PlayerInputController : MonoBehaviour
     Transform hips;
     ParticleSystem swordTrail;
     AudioManager audioManager;
+    [SerializeField]
+    private Transform wheelPointer;
 
     public enum State
 	{
@@ -164,7 +166,6 @@ public class PlayerInputController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "OpenSpaceSection")
         {
-            AudioManager.i.PlayBackground("Explore3");
             musicNumber = 3;
 
         }
@@ -228,6 +229,11 @@ public class PlayerInputController : MonoBehaviour
 
         audioManager = FindObjectOfType<AudioManager>();
 
+        airImg = wheelPointer.GetChild(0).Find("Air").GetComponent<Image>();
+        fireImg = wheelPointer.GetChild(0).Find("Fire").GetComponent<Image>();
+        waterImg = wheelPointer.GetChild(0).Find("Water").GetComponent<Image>();
+        groundImg = wheelPointer.GetChild(0).Find("Ground").GetComponent<Image>();
+
 	}
     #endregion
 
@@ -248,7 +254,6 @@ public class PlayerInputController : MonoBehaviour
 	void Update () 
 	{
         HandleFightingTrack();
-        Debug.Log(numberOfEnemies);
         //GODMODE
         if (Input.GetKeyDown("l") && !godMode)
             godMode = true;
@@ -291,7 +296,7 @@ public class PlayerInputController : MonoBehaviour
 			movement /= 10;
 			pos = Input.mousePosition;
 			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = false;
+			// Cursor.visible = false;
 			SetState(State.ChangingElements);
 		} 
 
@@ -633,7 +638,8 @@ public class PlayerInputController : MonoBehaviour
 		uiBar.DecreaseBreath(250f * Time.deltaTime);
 
 		Vector3 angle = new Vector2(Input.GetAxisRaw("Horizontal2"), -Input.GetAxisRaw("Vertical2"));
-		//Handle mouse or controller - in that order
+        
+		// Handle mouse or controller - in that order
 		if (angle == Vector3.zero)
 		{
 			Vector2 dist = Input.mousePosition - pos;		
@@ -644,54 +650,119 @@ public class PlayerInputController : MonoBehaviour
 			angleRadians=Mathf.Atan2(angle.y, angle.x);
 		 	angleDegrees = angleRadians * Mathf.Rad2Deg;
 		}
+            Vector3 mouse_pos = Vector3.zero;
+            if (angle == Vector3.zero) mouse_pos = Input.mousePosition - pos;
+            else mouse_pos = angle;
+            mouse_pos.z = 5f;
+            Vector3 object_pos = Camera.main.WorldToScreenPoint(wheelPointer.position);
+            Debug.Log(object_pos);
+            // mouse_pos.x = mouse_pos.x - object_pos.x;
+            // mouse_pos.y = mouse_pos.y - object_pos.y;
+            float angleToMouse = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+            wheelPointer.rotation = Quaternion.Euler(new Vector3(0, 0, angleToMouse));
 
-		if (angleDegrees<0) 
-			angleDegrees+=360;
+            Debug.Log(angleToMouse);
+            if (angleToMouse >= 45 && angleToMouse < 135)
+            {
+                // airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, 1);
+                airImg.enabled = true;
+                selectedAbility = airEffect;
+                airBurst.SetActive(true);
+            }
+            else
+            {
+                airImg.enabled = false;
+                // airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, .7f);
+                airBurst.SetActive(false);
+            }
 
-		if ((angleDegrees < 45 && angleDegrees > 0) || angleDegrees > 315) 
-		{
-			waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, 1);
-			selectedAbility = waterEffect;
-            waterBurst.SetActive(true);
-		}
-		else
-		{
-			waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, .7f);
-            waterBurst.SetActive(false);
+            if ((angleToMouse < 45 && angleToMouse > 0) || (angleToMouse <= 0 && angleToMouse >= -45))
+            {
+                waterImg.enabled = true;
+                // waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, 1);
+                selectedAbility = waterEffect;
+                waterBurst.SetActive(true);
+            }
+            else
+            {
+                waterImg.enabled = false;
+                // waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, .7f);
+                waterBurst.SetActive(false);
+            }
 
-		}
+            if (angleToMouse > 135 || (angleToMouse <= -135 && angleToMouse > -180))
+            {
+                fireImg.enabled = true;
+            	// fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, 1);
+			    selectedAbility = fireEffect;
+                fireBurst.SetActive(true);
+		    }
+		    else
+            {
+                fireImg.enabled = false;
+			    // fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, .7f);
+                fireBurst.SetActive(false);
+            }
 
-		if (angleDegrees > 45 && angleDegrees <= 135)
-		{
-			airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, 1);
-			selectedAbility = airEffect;
-            airBurst.SetActive(true);
-		}
-		else
-        {
-			airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, .7f);
-            airBurst.SetActive(false);
-        }
+            if (angleToMouse > -135 && angleToMouse < -45)
+            {
+                groundImg.enabled = true;
+            	// groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, 1);
+			    selectedAbility = groundEffect;
+		    }
+		    else
+            {
+                groundImg.enabled = false;
+		    	// groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, .7f);
+            }
 
-		if (angleDegrees > 135 && angleDegrees <= 225)
-		{
-			fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, 1);
-			selectedAbility = fireEffect;
-            fireBurst.SetActive(true);
-		}
-		else
-        {
-			fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, .7f);
-            fireBurst.SetActive(false);
-        }
+		// if (angleDegrees<0) 
+		// 	angleDegrees+=360;
 
-		if (angleDegrees > 225 && angleDegrees <= 315)
-		{
-			groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, 1);
-			selectedAbility = groundEffect;
-		}
-		else
-			groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, .7f);
+		// if ((angleDegrees < 45 && angleDegrees > 0) || angleDegrees > 315) 
+		// {
+		// 	waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, 1);
+		// 	selectedAbility = waterEffect;
+        //     waterBurst.SetActive(true);
+		// }
+		// else
+		// {
+		// 	waterImg.color = new Color (waterImg.color.r, waterImg.color.g, waterImg.color.b, .7f);
+        //     waterBurst.SetActive(false);
+
+		// }
+
+		// if (angleDegrees > 45 && angleDegrees <= 135)
+		// {
+		// 	airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, 1);
+		// 	selectedAbility = airEffect;
+        //     airBurst.SetActive(true);
+		// }
+		// else
+        // {
+		// 	airImg.color = new Color (airImg.color.r, airImg.color.g, airImg.color.b, .7f);
+        //     airBurst.SetActive(false);
+        // }
+
+		// if (angleDegrees > 135 && angleDegrees <= 225)
+		// {
+		// 	fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, 1);
+		// 	selectedAbility = fireEffect;
+        //     fireBurst.SetActive(true);
+		// }
+		// else
+        // {
+		// 	fireImg.color = new Color (fireImg.color.r, fireImg.color.g, fireImg.color.b, .7f);
+        //     fireBurst.SetActive(false);
+        // }
+
+		// if (angleDegrees > 225 && angleDegrees <= 315)
+		// {
+		// 	groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, 1);
+		// 	selectedAbility = groundEffect;
+		// }
+		// else
+		// 	groundImg.color = new Color (groundImg.color.r, groundImg.color.g, groundImg.color.b, .7f);
 	}
     #endregion
 
@@ -724,6 +795,14 @@ public class PlayerInputController : MonoBehaviour
 		state = State.Charging;
 		return state;
 	}
+
+    internal bool GetStateChanging()
+    {
+        if (state == State.ChangingElements)
+            return true;
+        
+        return false;
+    }
 
 	internal IEnumerator CameraShaker(float duration, float magnitudeX, float magnitudeY)
 	{

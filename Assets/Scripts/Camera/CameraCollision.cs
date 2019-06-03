@@ -37,33 +37,37 @@ public class CameraCollision : MonoBehaviour
 
     void LateUpdate()
     {
-        desiredCameraPos = transform.parent.TransformPoint(dollyDir*15);
-        otherdesiredPos = transform.parent.TransformPoint(new Vector3(0,2,0));
-    
-        if(playerInputController.bling == true && maxDistance <= 18)
+        if (!playingCutscene)
         {
-            maxDistance += playerInputController.distancetoadd/150f;
-        }
-        else if(maxDistance >= 8.3f)
-        {
-            maxDistance -= playerInputController.distancetoadd/100f;
-        }
-        else
-        {
-            maxDistance = 8;
-        }
+            desiredCameraPos = transform.parent.TransformPoint(dollyDir*15);
+            otherdesiredPos = transform.parent.TransformPoint(new Vector3(0,2,0));
+        
+            if(playerInputController.bling == true && maxDistance <= 18)
+            {
+                maxDistance += playerInputController.distancetoadd/150f;
+            }
+            else if(maxDistance >= 8.3f)
+            {
+                maxDistance -= playerInputController.distancetoadd/100f;
+            }
+            else
+            {
+                maxDistance = 8;
+            }
 
-        if (Physics.Linecast(transform.parent.position, new Vector3(desiredCameraPos.x, desiredCameraPos.y - 1, desiredCameraPos.z), out hit ,layerMask) )
-        {
-            distance = Mathf.Clamp((hit.distance * 0.6f), 0f, maxDistance);
-        }
-        else
-        {           
-            distance = maxDistance;
-            hitwall = false;
-        }
+            if (Physics.Linecast(transform.parent.position, new Vector3(desiredCameraPos.x, desiredCameraPos.y - 1, desiredCameraPos.z), out hit ,layerMask) )
+            {
+                distance = Mathf.Clamp((hit.distance * 0.6f), 0f, maxDistance);
+            }
+            else
+            {           
+                distance = maxDistance;
+                hitwall = false;
+            }
 
-        transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
+
+        }
     }
             
 }

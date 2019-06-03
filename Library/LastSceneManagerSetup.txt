@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/OpenSpaceSection.unity
+- path: Assets/Scenes/StorageSection.unity
   isLoaded: 1
   isActive: 1

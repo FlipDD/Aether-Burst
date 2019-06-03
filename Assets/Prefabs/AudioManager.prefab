@@ -80,7 +80,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: WindJump
-    clip: {fileID: 8300000, guid: 59e797008fef1874996e5f5588886a42, type: 3}
+    clip: {fileID: 8300000, guid: 2a1028c66bfe10f43895e40463bda240, type: 3}
     volume: 1
     pitch: 0.47
     source: {fileID: 0}
@@ -111,12 +111,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Walk1
     clip: {fileID: 8300000, guid: d5683160fe2485042a6eb81fcf52f2b3, type: 3}
-    volume: 0.6
+    volume: 0.781
     pitch: 1
     source: {fileID: 0}
   - name: Walk2
     clip: {fileID: 8300000, guid: 6758f783efd076e47b153eb845f2ac44, type: 3}
-    volume: 0.6
+    volume: 0.775
     pitch: 1
     source: {fileID: 0}
   - name: Land
@@ -156,7 +156,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Aether
     clip: {fileID: 8300000, guid: 66b90dc2da2575f4299b9a9871e17061, type: 3}
-    volume: 0.628
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: GargoV1

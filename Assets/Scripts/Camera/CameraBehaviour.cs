@@ -56,11 +56,13 @@ public class CameraBehaviour : MonoBehaviour
     private bool stoprecording;
     private bool recordtimer;
     internal bool playingCutscene;
+    private PlayerInputController playerScript;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         wall = GameObject.FindGameObjectWithTag("Front");
+        playerScript = player.GetComponent<PlayerInputController>();
 
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
@@ -85,6 +87,11 @@ public class CameraBehaviour : MonoBehaviour
         {
             mouseX = - Input.GetAxis("Horizontal2");
             mouseY = Input.GetAxis("Vertical2");
+        }
+        if (playerScript.GetStateChanging() || playingCutscene)
+        {
+            mouseX = 0;
+            mouseY = 0;
         }
         if (resetRotation == false)
         {
@@ -237,7 +244,7 @@ public class CameraBehaviour : MonoBehaviour
     void LateUpdate()
     {
         
-        CameraUpdater();
+        if (!playerScript.GetStateChanging() && !playingCutscene) CameraUpdater();
         // if (timer < duration)
         // {
         //     transform.localPosition += Random.insideUnitSphere * 200;

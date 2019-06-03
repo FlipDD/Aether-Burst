@@ -39,9 +39,9 @@ public class ShatterOnCollision : MonoBehaviour
             foreach (MeshCollider mc in smallRocksMc)
                 mc.isTrigger = false;
 
-            if (col.gameObject.CompareTag("Player"))
-                col.gameObject.GetComponent<UIBar>().UpdateHp(-10);
         }
 
+        if (col.gameObject.CompareTag("Player"))
+            col.gameObject.GetComponent<UIBar>().UpdateHp(-20);
     }
 }

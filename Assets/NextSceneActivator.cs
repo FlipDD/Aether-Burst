@@ -15,7 +15,7 @@ public class NextSceneActivator : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && playerInputController.numberOfEnemies < 1)
         {
             fadeInOut.FadeIn();
             // playerInputController.SetIdle();

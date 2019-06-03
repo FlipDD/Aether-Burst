@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 474}
-  m_MaxSize: {x: 14000, y: 14024}
+  m_MinSize: {x: 683, y: 474}
+  m_MaxSize: {x: 14002, y: 14024}
   vertical: 0
-  controlID: 40019
+  controlID: 7594
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,10 +126,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 404, y: 474}
+  m_MinSize: {x: 406, y: 474}
   m_MaxSize: {x: 10000, y: 14024}
   vertical: 1
-  controlID: 39979
+  controlID: 7595
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,10 +151,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 673
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 39980
+  controlID: 7596
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,8 +174,8 @@ MonoBehaviour:
     y: 0
     width: 448
     height: 673
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -209,10 +209,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 276}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 10256cff96a57dffc8db8dff20eb8dff06b897ffb2bd9aff9aba9dff00c39dff28c2a0ff0ce1acffe00eadff1043ccff9c48ccff707bccffdc29cdffe63ccdff7e48cdffec52cdff2057cdffdca1cdffdaadcdff548bcfff7ea9e9ff58f1f7ff1ce0ffff40e8ffff42e8ffff52e8ffff56e8ffff72e8ffff86e8ffff8ae8ffff96e8ffff20e9ffff34e9ffff56e9ffffa2e9ffffc0e9ffffc8e9ffffcee9ffffd2fbfffff4ffffffee65000016670000de5b0400ea5b0400fa5e04000a6304005a6604002e6b0400f46d0400366e040004c01600
+      m_ExpandedIDs: 2ce4f9ffd6a6ffff02a7ffff4aa7ffff96a7ffffe4a7ffffb6c9ffffccc9ffffdec9ffffe0c9ffffa8fbffffd88b0000e48b00000a9b0000289b0000a821010006220100e8230100d8240100fa240100fc2401000a250100802a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -323,9 +323,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.61, y: 1.333, z: 0}
+    m_Target: {x: -88.166016, y: -61.09646, z: -115.91782}
     speed: 2
-    m_Value: {x: -5.61, y: 1.333, z: 0}
+    m_Value: {x: -88.166016, y: -61.09646, z: -115.91782}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -353,13 +353,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.1065219, y: -0.03966483, z: 0.0042526987, w: -0.9935098}
+    m_Target: {x: -0.032148242, y: -0.8458024, z: 0.53005004, w: -0.05130121}
     speed: 2
-    m_Value: {x: -0.1065219, y: -0.03966483, z: 0.0042526987, w: -0.9935098}
+    m_Value: {x: -0.032148242, y: -0.8458024, z: 0.53005004, w: -0.05130121}
   m_Size:
-    m_Target: 4.467849
+    m_Target: 183.4219
     speed: 2
-    m_Value: 4.467849
+    m_Value: 183.4219
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -507,7 +507,7 @@ MonoBehaviour:
     height: 254
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: open
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -518,20 +518,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Camera
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Camera
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\flip_\Documents\Fil\GAD\Unity\AlchemyThingie
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c2c0000862c0000cc2e0000ee380000fa3c0000584600005c46000000ca9a3b
+    scrollPos: {x: 0, y: 387}
+    m_SelectedIDs: 46500000
+    m_LastClickedID: 20550
+    m_ExpandedIDs: 00000000182d0000422d0000862f000016350000a4390000ae3d00000a4700000e4700004051000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c2c0000862c0000cc2e0000ee380000fa3c0000584600005c46000000ca9a3b
+    m_ExpandedIDs: 00000000182d0000422d0000862f000016350000a4390000ae3d00000a4700000e4700004051000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,8 +584,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f2c21600
-    m_LastClickedInstanceID: 1491698
+    m_SelectedInstanceIDs: b6230100
+    m_LastClickedInstanceID: 74678
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 1401888
+  m_LastSelectedObjectID: 74830
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -688,15 +688,15 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -787,5 +787,7 @@ MonoBehaviour:
   m_GlobalObjectTypeName: 
   m_RegisteredViewURLs:
   - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/collab
   m_RegisteredViewInstances:
+  - {fileID: 0}
   - {fileID: 0}
