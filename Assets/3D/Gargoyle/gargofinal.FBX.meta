@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: 477496248bf212e4ea1e7b4a621634c5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box005
+    100002: Character003
+    100004: Character0031Bone001
+    100006: Character0031Bone001 1
+    100008: Character0031Bone002
+    100010: Character0031Bone002 1
+    100012: Character0031Bone002 2
+    100014: Character0031Bone003
+    100016: Character003LArm1
+    100018: Character003LArm1 1
+    100020: Character003LArm2
+    100022: Character003LArm2 1
+    100024: Character003LArmCollarbone
+    100026: Character003LArmCollarbone 1
+    100028: Character003LArmDigit11
+    100030: Character003LArmDigit12
+    100032: Character003LArmDigit13
+    100034: Character003LArmDigit21
+    100036: Character003LArmDigit22
+    100038: Character003LArmDigit23
+    100040: Character003LArmDigit31
+    100042: Character003LArmDigit32
+    100044: Character003LArmDigit33
+    100046: Character003LArmPalm
+    100048: Character003LArmPalm 1
+    100050: Character003LLeg1
+    100052: Character003LLeg2
+    100054: Character003LLegAnkle
+    100056: Character003LLegDigit11
+    100058: Character003LLegDigit12
+    100060: Character003LLegDigit13
+    100062: Character003LLegDigit21
+    100064: Character003LLegDigit22
+    100066: Character003LLegDigit23
+    100068: Character003LLegPlatform
+    100070: Character003Pelvis002
+    100072: Character003Pelvis003
+    100074: Character003Pelvis004
+    100076: Character003Pelvis004Bone001
+    100078: Character003Pelvis004Bone002
+    100080: Character003Pelvis004Bone003
+    100082: Character003Pelvis004Bone004
+    100084: Character003Pelvis004Bone005
+    100086: Character003RArm1
+    100088: Character003RArm1 1
+    100090: Character003RArm2
+    100092: Character003RArm2 1
+    100094: Character003RArmCollarbone
+    100096: Character003RArmCollarbone 1
+    100098: Character003RArmDigit11
+    100100: Character003RArmDigit12
+    100102: Character003RArmDigit13
+    100104: Character003RArmDigit21
+    100106: Character003RArmDigit22
+    100108: Character003RArmDigit23
+    100110: Character003RArmDigit31
+    100112: Character003RArmDigit32
+    100114: Character003RArmDigit33
+    100116: Character003RArmPalm
+    100118: Character003RArmPalm 1
+    100120: Character003RLeg1
+    100122: Character003RLeg2
+    100124: Character003RLegAnkle
+    100126: Character003RLegDigit11
+    100128: Character003RLegDigit12
+    100130: Character003RLegDigit13
+    100132: Character003RLegDigit21
+    100134: Character003RLegDigit22
+    100136: Character003RLegDigit23
+    100138: Character003RLegPlatform
+    100140: Character003Spine1
+    100142: Character003Spine1 1
+    100144: Character003Spine2
+    100146: Character003Spine2 1
+    100148: Character003Spine3
+    100150: Character003Spine3 1
+    100152: Character003Spine4
+    100154: //RootNode
+    400000: Box005
+    400002: Character003
+    400004: Character0031Bone001
+    400006: Character0031Bone001 1
+    400008: Character0031Bone002
+    400010: Character0031Bone002 1
+    400012: Character0031Bone002 2
+    400014: Character0031Bone003
+    400016: Character003LArm1
+    400018: Character003LArm1 1
+    400020: Character003LArm2
+    400022: Character003LArm2 1
+    400024: Character003LArmCollarbone
+    400026: Character003LArmCollarbone 1
+    400028: Character003LArmDigit11
+    400030: Character003LArmDigit12
+    400032: Character003LArmDigit13
+    400034: Character003LArmDigit21
+    400036: Character003LArmDigit22
+    400038: Character003LArmDigit23
+    400040: Character003LArmDigit31
+    400042: Character003LArmDigit32
+    400044: Character003LArmDigit33
+    400046: Character003LArmPalm
+    400048: Character003LArmPalm 1
+    400050: Character003LLeg1
+    400052: Character003LLeg2
+    400054: Character003LLegAnkle
+    400056: Character003LLegDigit11
+    400058: Character003LLegDigit12
+    400060: Character003LLegDigit13
+    400062: Character003LLegDigit21
+    400064: Character003LLegDigit22
+    400066: Character003LLegDigit23
+    400068: Character003LLegPlatform
+    400070: Character003Pelvis002
+    400072: Character003Pelvis003
+    400074: Character003Pelvis004
+    400076: Character003Pelvis004Bone001
+    400078: Character003Pelvis004Bone002
+    400080: Character003Pelvis004Bone003
+    400082: Character003Pelvis004Bone004
+    400084: Character003Pelvis004Bone005
+    400086: Character003RArm1
+    400088: Character003RArm1 1
+    400090: Character003RArm2
+    400092: Character003RArm2 1
+    400094: Character003RArmCollarbone
+    400096: Character003RArmCollarbone 1
+    400098: Character003RArmDigit11
+    400100: Character003RArmDigit12
+    400102: Character003RArmDigit13
+    400104: Character003RArmDigit21
+    400106: Character003RArmDigit22
+    400108: Character003RArmDigit23
+    400110: Character003RArmDigit31
+    400112: Character003RArmDigit32
+    400114: Character003RArmDigit33
+    400116: Character003RArmPalm
+    400118: Character003RArmPalm 1
+    400120: Character003RLeg1
+    400122: Character003RLeg2
+    400124: Character003RLegAnkle
+    400126: Character003RLegDigit11
+    400128: Character003RLegDigit12
+    400130: Character003RLegDigit13
+    400132: Character003RLegDigit21
+    400134: Character003RLegDigit22
+    400136: Character003RLegDigit23
+    400138: Character003RLegPlatform
+    400140: Character003Spine1
+    400142: Character003Spine1 1
+    400144: Character003Spine2
+    400146: Character003Spine2 1
+    400148: Character003Spine3
+    400150: Character003Spine3 1
+    400152: Character003Spine4
+    400154: //RootNode
+    2100000: 09 - Default
+    4300000: Box005
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box005
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: be656995c85f5124bb13712a8afc6e48, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 3.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fda697501bdd5f41938130e2592227a, type: 3}
+  m_Name: Attack Action
+  m_EditorClassIdentifier: 
+  shootPrefab: {fileID: 5045843555237912037, guid: c8c6e1eef95fd854fa04b05ab72efea4,
+    type: 3}
+  shootTimeInterval: 2
+  velocity: {x: -18.904009, y: 33.742065, z: 0}

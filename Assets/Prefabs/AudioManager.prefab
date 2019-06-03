@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7786182924878628737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7786182924878628743}
+  - component: {fileID: 7786182924878628736}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7786182924878628743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786182924878628737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7786182924878628736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786182924878628737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe71b05666a26e44b82c06541f97558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Hurt
+    clip: {fileID: 8300000, guid: d8f2103c3007fd44d838ae59a6c70e81, type: 3}
+    volume: 0.733
+    pitch: 1.49
+    source: {fileID: 0}
+  - name: Sword1
+    clip: {fileID: 8300000, guid: 32d988ff3feddfe46af6faeeae8497aa, type: 3}
+    volume: 1
+    pitch: 2.16
+    source: {fileID: 0}
+  - name: Sword2
+    clip: {fileID: 8300000, guid: 68dc9c37113c5fd4bab5fafadb922fa5, type: 3}
+    volume: 1
+    pitch: 2.08
+    source: {fileID: 0}
+  - name: Sword3
+    clip: {fileID: 8300000, guid: 6ce723ecc0a2bf3498c53703c9240179, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: AirPush
+    clip: {fileID: 8300000, guid: 34970a7f9111ba14b8e36efd6163ca32, type: 3}
+    volume: 1
+    pitch: 0.7
+    source: {fileID: 0}
+  - name: FireBreath
+    clip: {fileID: 8300000, guid: a073e854f46039649be0330209f7f941, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: WaterStun
+    clip: {fileID: 8300000, guid: dbc0c38aa0fc93d44bb8dacc9901e3ad, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: WindJump
+    clip: {fileID: 8300000, guid: 59e797008fef1874996e5f5588886a42, type: 3}
+    volume: 1
+    pitch: 0.47
+    source: {fileID: 0}
+  - name: WallJump
+    clip: {fileID: 8300000, guid: 8f3e612e2100cc44487bdd8d9c4c9fad, type: 3}
+    volume: 0.567
+    pitch: 0.42
+    source: {fileID: 0}
+  - name: FireDash
+    clip: {fileID: 8300000, guid: 2a11eb0f9a8be2d41874df8fbbcf4b7a, type: 3}
+    volume: 0.574
+    pitch: 2.17
+    source: {fileID: 0}
+  - name: ChargeFire
+    clip: {fileID: 8300000, guid: 5b7bcae6df629104ba4d7489ad2de2a0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChargeWater
+    clip: {fileID: 8300000, guid: e32ac610cfd633042952af9ebe50e9d3, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChargeAir
+    clip: {fileID: 8300000, guid: ce5147550b4223a4ca0c3d79e9bef601, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Walk1
+    clip: {fileID: 8300000, guid: d5683160fe2485042a6eb81fcf52f2b3, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Walk2
+    clip: {fileID: 8300000, guid: 6758f783efd076e47b153eb845f2ac44, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Land
+    clip: {fileID: 8300000, guid: 158c44f66d119344ebe05663baaad61f, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: Walk11
+    clip: {fileID: 8300000, guid: d5683160fe2485042a6eb81fcf52f2b3, type: 3}
+    volume: 0.15
+    pitch: 1
+    source: {fileID: 0}
+  - name: Walk22
+    clip: {fileID: 8300000, guid: 6758f783efd076e47b153eb845f2ac44, type: 3}
+    volume: 0.15
+    pitch: 1
+    source: {fileID: 0}
+  - name: Explore1
+    clip: {fileID: 8300000, guid: 959e94ed183d9af4b8935a43b5f97afc, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Explore2
+    clip: {fileID: 8300000, guid: d7197f4ddaa51c849b5157e2f10ef6a4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Explore3
+    clip: {fileID: 8300000, guid: 127700afd5a6c2e428b998dc3a0ede02, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Boss
+    clip: {fileID: 8300000, guid: 4f9b7f11032b1294984f81e2c5010a34, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Aether
+    clip: {fileID: 8300000, guid: 66b90dc2da2575f4299b9a9871e17061, type: 3}
+    volume: 0.628
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargoV1
+    clip: {fileID: 8300000, guid: 8afb1bd647b9dce4095607f067fd0ad8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargoV2
+    clip: {fileID: 8300000, guid: d8bdaa853fc8abe42b64f615321cd3c3, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargoV3
+    clip: {fileID: 8300000, guid: 2c2b40e2a8cfa2f4daf5504a9f52bb24, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fight1
+    clip: {fileID: 8300000, guid: 34d7f90af02ba7748a0417a422a9c109, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fight2
+    clip: {fileID: 8300000, guid: 3cecc1b235b45a04ca0036f642041000, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Fight3
+    clip: {fileID: 8300000, guid: 8326667c4b1e42f43a05a4390875812b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargClaw
+    clip: {fileID: 8300000, guid: a9dfd4b9ce4c209428e15582c5921c6c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargDig
+    clip: {fileID: 8300000, guid: 2f317b15b484c194a96114020e4ea759, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargDive
+    clip: {fileID: 8300000, guid: 7e34c3b86d0c68e4db61a9e42a6d8e0c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargLand
+    clip: {fileID: 8300000, guid: b4186009ef790e64a9f17343d9bd651d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GargThrow
+    clip: {fileID: 8300000, guid: 125a8b133eec3d04a95599bf9306c618, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BreakPlat
+    clip: {fileID: 8300000, guid: 8f8fe1ce5c8e22a459efec3e9d60c66d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossPoison
+    clip: {fileID: 8300000, guid: fdcfd8fae256806498683976cf88d86a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossClaw
+    clip: {fileID: 8300000, guid: 1225c06b3f148194d8cb67e44be7f1c1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossEat
+    clip: {fileID: 8300000, guid: 7f4bb667d2f9f004c9f5cbca55635407, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossJump
+    clip: {fileID: 8300000, guid: ee84e0b02332c2a469da14cde0136692, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BossLand
+    clip: {fileID: 8300000, guid: bb81c58889a1c684bbf08af2303c0f73, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Earthquake
+    clip: {fileID: 8300000, guid: 29522750fc889d04a8b972e3964875db, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  sfxMultiplier: 1
+  musicMultiplier: 1

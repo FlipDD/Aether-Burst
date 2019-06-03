@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - Slope
+  - Wall
+  - Bullet
+  - Sword
+  - SmallRocks
+  - IsGroundChecker
+  - FireBreath
+  - Boulder
+  - Door
+  - SpecialBoulder
+  - SpecialPilar
+  - Rope
+  - Roof
+  - SecretBoulder
+  - SecretBoulder2
+  - Front
+  - Skull
+  - Boss
+  - EnemyBullet
+  - EnemyWeapons
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Ground
+  - IgnorePlayer
+  - Enemies
+  - IgnoreLayer
+  - 
+  - Player
+  - FireDash
+  - PlayerColliders
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Climbable
+  - 
+  - 
+  - Bullet
+  - WallRun
+  - HitByWind
+  - HitByFire
+  - IgnoreBoulder
+  - EnemyWeapons
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
